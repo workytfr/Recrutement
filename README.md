@@ -1,66 +1,60 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="workyt.png" alt="Logo">
 </p>
 
-## About Laravel
+<h1 align="center">Formulaire de Recrutement en Laravel</h1>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">
+  <strong>Un formulaire de recrutement en ligne pour les postes de rédacteurs, correcteurs, helpeurs et modérateurs.</strong>
+</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<p align="center">
+  <a href="https://github.com/workytfr/Recrutement/issues">Signaler un problème</a>
+  &bull;
+  <a href="https://github.com/workytfr/Recrutement/issues">Demander une fonctionnalité</a>
+</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<br>
 
-## Learning Laravel
+## Aperçu
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Ce projet consiste en un formulaire de recrutement en ligne développé avec Laravel. Il permet aux candidats de postuler aux postes de rédacteurs, correcteurs, helpeurs et modérateurs. Les administrateurs du site peuvent valider ou refuser les candidatures et sont notifiés par e-mail. De plus, les candidats sont également informés par e-mail si leur candidature est acceptée ou refusée.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+![Aperçu du formulaire de recrutement](screenshot.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Prérequis
 
-## Laravel Sponsors
+Avant d'installer et d'exécuter ce projet, assurez-vous d'avoir les éléments suivants :
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- PHP 8.2
+- Composer
+- Serveur de messagerie configuré dans Laravel pour envoyer des e-mails
 
-### Premium Partners
+## Installation
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Suivez les étapes ci-dessous pour installer et exécuter ce projet :
 
-## Contributing
+1. Clonez ce dépôt : `git clone git@github.com:workytfr/Recrutement.git`
+2. Accédez au répertoire du projet : `cd Recrutement`
+3. Installez les dépendances : `composer install`
+4. Copiez le fichier d'exemple de configuration : `cp .env.example .env`
+5. Générez la clé d'application : `php artisan key:generate`
+6. Configurez les variables d'environnement dans le fichier `.env`, notamment pour la base de données et le serveur de messagerie
+7. Exécutez les migrations de la base de données : `php artisan migrate`
+8. Démarrez le serveur de développement : `php artisan serve`
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Utilisation
 
-## Code of Conduct
+Une fois le projet installé et le serveur de développement démarré, vous pouvez accéder au formulaire de recrutement en utilisant l'URL suivante : `http://localhost:8000/`
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Les candidats peuvent remplir le formulaire avec les informations demandées et soumettre leur candidature. Les administrateurs peuvent se connecter à l'interface d'administration pour consulter les candidatures, les valider ou les refuser.
 
-## Security Vulnerabilities
+Assurez-vous de configurer correctement le serveur de messagerie dans Laravel pour que les e-mails de notification fonctionnent.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Contribuer
 
-## License
+Les contributions à ce projet sont les bienvenues. Si vous souhaitez apporter des améliorations, signalez des problèmes ou demandez de nouvelles fonctionnalités, veuillez soumettre une demande pull ou ouvrir une issue.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Licence
+
+Ce projet est sous licence MIT. Consultez le fichier [LICENSE](LICENSE) pour plus d'informations.
